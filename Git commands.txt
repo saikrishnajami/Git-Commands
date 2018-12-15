@@ -60,3 +60,5 @@ Fordeleting branch:
 1) git branch -d branchname  //for deleting locally
 2) git push origin --delete "jami1"  //for deleting from remote
 
+How to Trigger Email notification from github:::
+1) go to github  --> open repository -->Open settings -->Integration Services-->Add service -->Email
