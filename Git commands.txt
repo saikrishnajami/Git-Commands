@@ -1,0 +1,62 @@
+Git Installation:
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+git config --global user.name "SaiharikrishnaJami"
+git config --global user.email bharathuppiretla@gmail.com
+git config --list
+git config user.name
+
+Setting up project directory in GIT
+cd /C/Users/v-saijam/Downloads/powershell
+git init  >>for setting up repository.
+CREATING README FILE:
+echo "# Kusto-Learning" >> README.md
+CREATING IGNORE FILE   //these contents will be ignored will adding to github//
+
+touch .gitignore         //touch is used to create empty files.
+cat .gitignore   ///to view contents in file.
+git add --all    //to add all files in our local repo
+git status  //to check status of newly added.
+git commit -m "Initial commit"  //for saving/commiting current version of project//
+
+//commit is nothing but change to project//
+"Intial commit"  //is the msg we sent for understanding commit changes.
+
+//For linking remote repo to local repo::
+git remote add origin https://github.com/SaiharikrishnaJami/Kusto-Testcode.git
+
+//to push files from local repo to remote repo:
+git push -u origin master
+
+//We will get below msg after git status if our branch is upto date
+$ git status
+On branch master
+"Your branch is up to date with 'origin/master'.
+nothing to commit, working tree clean"  //uptodatemsg
+
+
+//Now I have made changes to README.md file .So now it is only updatedin local repobut not online repo.To update it steps as below.
+1) git add README.md  //only we are giving the file which we changed rather than git add --all
+2)git commit -m "Updated README.md"   /for committing changes.
+3)git push -u origin master
+4) git status
+//it should be "Your branch is up to date with 'origin/master'.
+nothing to commit, working tree clean"  //uptodatemsg
+
+
+
+
+For Creating branch:
+1) git branch branchname  //for creating branch
+2) git checkout branchname  //for siwtching to branch  --> git add.  -->git commit
+3) git push -u origin branchname ///for pushing branch to remote repository
+
+For Merging branch to mater
+1) git checkout master  //1st we need to be in master for checkingout
+2) git merge branchname  //for merging branch with master  locally
+3) git push -u origin master //for pushing changes to remote repo
+
+Fordeleting branch:
+1) git branch -d branchname  //for deleting locally
+2) git push origin --delete "jami1"  //for deleting from remote
+
