@@ -62,3 +62,52 @@ Fordeleting branch:
 
 How to Trigger Email notification from github:::
 1) go to github  --> open repository -->Open settings -->Integration Services-->Add service -->Email
+
+GIT TAGS:::::
+
+Tagging in Git or any other VCS refers to creating scecific points in history for your repository or data.
+This is usually done to mark release points (eg::v1.0,v1.1 etc)
+
+  WHy??? to create
+1) to mark release points for your code/data
+2) to create historic restore points
+
+Creating Tags in GIT::::::
+1) checkout the branch where you want to create the tag    //git checkout branchname
+2) Create tag and give some name    ///git tag tagname
+//for creating annotated tags   //git tag -a v1.1 -m "tag for release"
+3) Display or show tags
+  .git tag   //for checkgit showing tags
+  .git show v1.0  //for details of particular tag
+  .git tag -l "v1."  //for displayoing tags in range v1
+4) Pushing Tags to remote
+git push origin v1.0  //For pushing to remote
+git push origin --tags //for pushing all the tags
+git push --tags  //for pushing all at a time
+
+5)Deleting Tags(if required)
+
+//to delete tags from local:
+
+git tag -d v1.0
+git tag --delete v1.0
+
+//to delete tags from remote
+
+git push origin -d v1.0
+git push origin --delete v1.0
+git push oridin :v1.0
+
+
+
+#####Git logs and checksum::::
+if we give Git logs command,
+We see here for every commit there will be 40digit number called checksum number created by SHA1 algorithm.So for everycommit we will get the unique checksum number.
+
+
+####3How to checkout tags from barnch:
+git checkout -b branchname tagname
+
+How to create tag for already existing commit::;;;;
+git tag tagname checksum number
+
