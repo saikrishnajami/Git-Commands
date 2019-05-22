@@ -19,7 +19,7 @@ git add --all    //to add all files in our local repo
 git status  //to check status of newly added.
 git commit -m "Initial commit"  //for saving/commiting current version of project//
 
-//commit is nothing but change to project//
+//commit is nothing but change to project//?
 "Intial commit"  //is the msg we sent for understanding commit changes.
 
 //For linking remote repo to local repo::
